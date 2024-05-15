@@ -1,8 +1,8 @@
 {
-  "name": "Busitalia Veneto",
-  "short_name": "Busitalia",
-  "id": "/ticket/",
-  "start_url": "/ticket/",
+  "name": "tkt",
+  "short_name": "tkt",
+  "id": "/tkt/",
+  "start_url": "/tkt/",
   "display": "standalone",
   "background_color": "#FFE9D2",
   "theme_color": "#FFE1C4",
