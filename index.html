@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap"
+    rel="stylesheet">
+
+  <link rel="manifest" href="/manifest.json">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .wrapper {
+      position: relative;
+      z-index: 1;
+    }
+
+    .top-div {
+      position: relative;
+      z-index: 2;
+    }
+
+    .shadowww{
+      background-color: #fff;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+    }
+
+  </style>
+
+  <!-- ios support -->
+  <!-- <link rel="apple-touch-icon" href="static/img/icons/96.png"> -->
+  <link rel="mask-icon" href="https://upload.wikimedia.org/wikipedia/commons/e/e6/Bus-logo.svg" color="#FFE1C4"> <!-- https://stackoverflow.com/q/15710047/9935654 -->
+  <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+  <meta name="theme-color" content="#FFE1C4">
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('service worker registered'))
+        .catch(err => console.log('service worker not registered', err))
+    }
+  </script>
+</head>
+
+<body class="font-['Teachers']">
+
+  <div class="relative">
+    <div class="grid grid-cols-3 items-center bg-[#CC0033] p-4 rounded-b-xl top-div">
+      <div class="col-start-1">
+        <img src="backhome.png" alt="Left Image" class="h-8 w-30">
+      </div>
+      <div class="col-start-2 text-center">
+        <p class="text-white font-bold text-xl">I miei titoli</p>
+      </div>
+      <div class="col-start-3 justify-self-end">
+        <img src="person.png" alt="Right Image" class="h-8 ">
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="bg-[#50C79D] p-3 mt-[-10px]">
+        <div class="pt-3">
+        <p class="text-white text-center font-bold text-xl">TITOLO ATTIVO</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="m-4 ml-4 mr-4 p-4 mx-auto rounded-lg bg-white shadowww">
+    <div class="flex items-center justify-center h-full">
+      <img src="checkandvalidation.png" alt="Validation Image" class="max-h-full max-w-full">
+    </div>
+
+    <div class="flex items-center justify-between">
+      <div class="flex items-center">
+        <img src="clock.png" alt="Left Image" class="h-8 mr-2" />
+        <p class="text-lg" id="timer"></p>
+      </div>
+      <img src="verif.png" alt="Right Image" class="h-6" />
+    </div>
+  </div>
+
+  <div class="p-4">
+  <img src="waves.gif" alt="Description of the GIF">
+  </div>
+
+  <div class="p-4 -mt-4">
+    <p class="text-2xl font-extrabold text-[#CC0033]">ABB. MENS. STUDENTE</p>
+  </div>
+
+  <div class="p-5 -mt-6">
+    <p class="text-xl">ABB. MENS. STUDENTE</p>
+  </div>
+
+  <div class="p-4 m-5 -mt-2 bg-neutral-200 rounded-lg">
+    <p class="text-lg -mt-2">Tratta</p>
+    <p class="text-xl font-medium -mb-2">Da PIEVE DI CURTAROLO a PADOVA</p>
+  </div>
+
+  <div class="p-4 m-5 -mt-2 bg-[#50C79D] rounded-lg">
+    <p class="text-lg -mt-2 text-white">Scadenza</p>
+    <p class="text-xl font-medium -mb-2 text-white">16/06/2024 23:59:59</p>
+  </div>
+
+  <div class="p-4 m-5 -mt-2 bg-neutral-200 rounded-lg">
+    <p class="text-lg -mt-2">Emesso il: <span class="text-xl font-bold">17/05/2024 18:11</span></p>
+  </div>
+
+  <div class="m-5 -mt-2 flex justify-between items-center">
+    <span class="font-bold text-2xl">Price</span>
+    <span class="text-[#CC0033] text-3xl font-bold">€61,60</span>
+  </div>
+  
+
+  <script>
+    function updateTimer() {
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, '0');
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      const seconds = now.getSeconds().toString().padStart(2, '0');
+      const timeString = `${hours}:${minutes}:${seconds}`;
+      document.getElementById('timer').textContent = timeString;
+    }
+  
+    setInterval(updateTimer, 1000);
+  </script>
+</body>
+
+</html>
