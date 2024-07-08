@@ -9,12 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?Futura Roundfamily=Teachers:ital,wght@0,400..800;1,400..800&display=swap"
           rel="stylesheet">
 
-
-
     <link rel="manifest" href="manifest.json">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" type="text/css"
-          href="fonts/style.css"/>
+    <link rel="stylesheet" type="text/css" href="fonts/futura/style.css"/>
 
     <style>
         .wrapper {
@@ -49,7 +46,8 @@
     </script>
 </head>
 
-<body class="">
+
+<body class="font-['Futura']">
 
 <div class="relative">
     <div class="grid grid-cols-3 items-center bg-[#CC0033] p-4 rounded-b-xl top-div ">
@@ -80,28 +78,33 @@
     <div class="flex items-center justify-between">
         <div class="flex items-center">
             <img src="clock.png" alt="Left Image" class="h-6 mr-2"/>
-            <p class="text-lg" id="timer"></p>
+            <p class="text-lg" id="timer">18:39:31</p>
         </div>
         <img src="verif.png" alt="Right Image" class="h-5"/>
     </div>
 </div>
 
-<div class="p-4">
-    <img src="waves.gif" alt="Description of the GIF">
-</div>
-
 <div class="p-4 -mt-4">
-    <p class="text-l font-extrabold text-[#0200F1]">CORSA SEMPLICE PADOVA CL. 03</p>
-</div>
-
-<div class="p-4 m-5 -mt-2 bg-[#50C79D] rounded-lg">
-    <p class="text-xs -mt-2 text-white -mb-2">Time remaining:</p>
-    <p class="text-xl font-medium -mb-2 text-white" id="time_remaining">0:39:13</p>
+    <p class="text-xl font-extrabold text-[#0200F1] mb-4">SETTIMANALE PD ELETTRONICO</p>
 </div>
 
 <div class="p-4 m-5 -mt-2 bg-neutral-200 rounded-lg">
-    <p class="text-xs -mt-2">Activated on:</p>
-    <p class="text-xl font-medium -mb-2" id="activate_on">01/07/2024 17:43:45</p>
+    <p class="text-xs -mt-2">Route:</p>
+    <p class="text-xl font-medium -mb-2" id="activate_on">From: PIOVE AUTOST. to PADOVA</p>
+</div>
+
+<div class="p-4 m-5 -mt-2 bg-[#50C79D] rounded-lg">
+    <div class="flex justify-between">
+        <div>
+            <p class="text-xs -mt-2 text-white">Valid from:</p>
+            <p class="text-xl font-medium -mb-2 text-white">07/04/2024</p>
+        </div>
+
+        <div class="text-right">
+            <p class="text-xs -mt-2 text-white">Valid until:</p>
+            <p class="text-xl font-medium -mb-2 text-white">06/05/2024</p>
+        </div>
+    </div>
 </div>
 
 <div class="p-4 m-5 -mt-2 bg-neutral-200 rounded-lg">
@@ -114,30 +117,15 @@
 </div>
 
 
-<div class="m-5 -mt-2 flex justify-between items-center">
+<div class="m-5 -mt-2 flex justify-between items-center mb-30">
     <span class="">
       <img src="sita_logo_small.png" alt="" srcset="" width="70%">
 
     </span>
     <span class="text-black text-xl font-bold">#7405/1851294</span>
 </div>
-<p class="m-5 font-bold text-[#0200F1]">
-    Il biglietto non è valido finchè non viene attivato dalla sezione "I miei titoli" cliccando il tasto "ATTIVA" prima
-    di salire a bordo bus o tram. Il biglietto non è trasferibile ad altro dispotivo mobile e scade se non attivato
-    entro il termine
-    massimo di 365 giorno dall'acquisto e di 90 giorni in caso di aggiornamento tariffario.
-    <br>
-    Il biglietto dà diritto ad effettuare un viaggio di corsa semplice.
-</p>
-<div class="m-5">
-    <a href="http://" class="underline text-[#0200F1]">Informazioni sui titoli di viaggio</a>
-    <p class="mt-4">
-        BUSITALIA VENETA S.p.A. <br>
-        Via del Pescarotto, 25/27 <br>
-        P.Iva 04874020284 <br>
-    </p>
 
-</div>
+<div></div>
 
 
 <script>
