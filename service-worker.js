@@ -1,22 +1,22 @@
 const assets = [
-    "/sita/",
-    "/sita/index.html",
-    "/sita/backhome.png",
-    "/sita/checkandvalidation.png",
-    "/sita/clock.png",
-    "/sita/person.png",
-    "/sita/verif.png",
-    "/sita/waves.png",
-    "/sita/404.html",
-    "/sita/manifest.json",
-    "/sita/favicon.ico",
-    "/sita/favicon-16x16.png",
-    "/sita/favicon-32x32.png",
-    "/sita/limerick-serial/style.css",
-    "/sita/limerick-serial/style.css",
-    "/sita/limerick-serial/Limerick-Serial Bold.ttf",
-    "/sita/limerick-serial/Limerick-Serial Regular.ttf",
-    "/sita/limerick-serial/Limerick-Serial-Medium Regular.ttf"
+    "/tkt/",
+    "/tkt/index.html",
+    "/tkt/backhome.png",
+    "/tkt/checkandvalidation.png",
+    "/tkt/clock.png",
+    "/tkt/person.png",
+    "/tkt/verif.png",
+    "/tkt/waves.png",
+    "/tkt/404.html",
+    "/tkt/manifest.json",
+    "/tkt/favicon.ico",
+    "/tkt/favicon-16x16.png",
+    "/tkt/favicon-32x32.png",
+    "/tkt/limerick-serial/style.css",
+    "/tkt/limerick-serial/style.css",
+    "/tkt/limerick-serial/Limerick-Serial Bold.ttf",
+    "/tkt/limerick-serial/Limerick-Serial Regular.ttf",
+    "/tkt/limerick-serial/Limerick-Serial-Medium Regular.ttf"
 ];
 
 self.addEventListener("install", installEvent => {
@@ -52,7 +52,7 @@ self.addEventListener("fetch", fetchEvent => {
                 })
             ).catch(() => {
                 if (fetchEvent.request.url.indexOf(".html") > -1 || fetchEvent.request.url === "https://github.com/sita4bu5") {
-                    return caches.match("/sita/404.html");
+                    return caches.match("/tkt/404.html");
                 }
             })
         }).catch(err => console.log("issue opening cache on fetch", err))
