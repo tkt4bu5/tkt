@@ -1,10 +1,10 @@
 {
-  "name": "TKT",
-  "short_name": "TKT",
-  "start_url": "/tkt/index.html",
+  "name": "Busitalia Veneto",
+  "short_name": "Busitalia Veneto",
+  "start_url": "/sita/index.html",
   "display": "standalone",
-  "background_color": "#f0e68c",
-  "theme_color": "#fffacd",
+  "background_color": "#D1122B",
+  "theme_color": "#D1122B",
   "orientation": "portrait-primary",
   "icons": [
       {

@@ -2,128 +2,231 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap"
-    rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap"
+          rel="stylesheet">
 
-  <link rel="manifest" href="manifest.json">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="manifest" href="manifest.json">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="fonts/futura/style.css"/>
 
-  <style>
-    .wrapper {
-      position: relative;
-      z-index: 1;
-    }
+    <style>
+        .wrapper {
+            position: relative;
+            padding-top: 15%;
+            z-index: 1;
+        }
 
-    .top-div {
-      position: relative;
-      z-index: 2;
-    }
+        .top-div {
+            position: fixed;
+            width: 100%;
+            z-index: 2;
+        }
 
-    .shadowww{
-      background-color: #fff;
-      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
-    }
+        .shadowww {
+            background-color: #fff;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+        }
 
-  </style>
+    </style>
 
-  <!-- IOS Support -->
-  <link rel="apple-touch-icon" href="icons/android/android-launchericon-96-96.png">
-  <meta name="apple-mobile-web-app-status-bar" content="#fffacd" />
+    <!-- IOS Support -->
+    <link rel="apple-touch-icon" href="icons/logo.png">
+    <meta name="apple-mobile-web-app-status-bar" content=""/>
 
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(reg => console.log('service worker registered'))
-        .catch(err => console.log('service worker not registered', err))
-    }
-  </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(reg => console.log('service worker registered'))
+                .catch(err => console.log('service worker not registered', err))
+        }
+    </script>
 </head>
 
-<body class="font-['Teachers']">
 
-  <div class="relative">
-    <div class="grid grid-cols-3 items-center bg-[#CC0033] p-4 rounded-b-xl top-div">
-      <div class="col-start-1">
-        <img src="backhome.png" alt="Left Image" class="h-8 w-30">
-      </div>
-      <div class="col-start-2 text-center">
-        <p class="text-white font-bold text-xl">I miei titoli</p>
-      </div>
-      <div class="col-start-3 justify-self-end">
-        <img src="person.png" alt="Right Image" class="h-8 ">
-      </div>
+<body class="font-['Open Sans']">
+
+<div class="relative">
+    <div class="grid grid-cols-3 items-center bg-[#CC0033] p-4 rounded-b-xl top-div ">
+        <div class="col-start-1">
+            <img src="backhome.png" alt="Left Image" class="h-8 w-30">
+        </div>
+        <div class="col-start-2 text-center">
+            <p class="text-white font-bold text-xl">my tickets</p>
+        </div>
+        <div class="col-start-3 justify-self-end">
+            <img src="person.png" alt="Right Image" class="h-8 ">
+        </div>
     </div>
     <div class="wrapper">
-      <div class="bg-[#50C79D] p-3 mt-[-10px]">
-        <div class="pt-3">
-        <p class="text-white text-center font-bold text-xl">TITOLO ATTIVO</p>
+        <div class="bg-[#50C79D] p-3 mt-[-10px]">
+            <div class="pt-3">
+                <p class="text-white text-center font-bold text-xl">TICKET ACTIVE</p>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 
-  <div class="m-4 ml-4 mr-4 p-4 mx-auto rounded-lg bg-white shadowww">
+<div class="m-4 ml-4 mr-4 p-4 mx-auto rounded-lg bg-white shadowww">
     <div class="flex items-center justify-center h-full">
-      <img src="checkandvalidation.png" alt="Validation Image" class="max-h-full max-w-full">
+        <img src="checkandvalidation.png" alt="Validation Image" class="max-h-full max-w-full">
     </div>
 
     <div class="flex items-center justify-between">
-      <div class="flex items-center">
-        <img src="clock.png" alt="Left Image" class="h-8 mr-2" />
-        <p class="text-lg" id="timer"></p>
-      </div>
-      <img src="verif.png" alt="Right Image" class="h-6" />
+        <div class="flex items-center">
+            <img src="clock.png" alt="Left Image" class="h-6 mr-2"/>
+            <p class="text-lg" id="timer">18:39:31</p>
+        </div>
+        <img src="verif.png" alt="Right Image" class="h-5"/>
     </div>
-  </div>
+</div>
 
-  <div class="p-4">
-  <img src="waves.gif" alt="Description of the GIF">
-  </div>
+<div class="p-4 -mt-4">
+    <p class="text-xl font-extrabold text-[#0200F1] mb-4" style="font-variation-settings: 'wdth' 75;">SETTIMANALE PD
+        ELETTRONICO</p>
+</div>
 
-  <div class="p-4 -mt-4">
-    <p class="text-2xl font-extrabold text-[#CC0033]">ABB. MENS. STUDENTE</p>
-  </div>
+<div class="p-4 m-5 -mt-2 bg-neutral-200 rounded-lg">
+    <p class="text-xs -mt-2">Route:</p>
+    <p class="text-xl font-medium -mb-2" id="activate_on">From: PIOVE AUTOST. to PADOVA</p>
+</div>
 
-  <div class="p-5 -mt-6">
-    <p class="text-xl">ABB. MENS. STUDENTE</p>
-  </div>
+<div class="p-4 m-5 -mt-2 bg-[#50C79D] rounded-lg">
+    <div class="flex justify-between">
+        <div>
+            <p class="text-xs -mt-2 text-white">Valid from:</p>
+            <p class="text-xl font-medium -mb-2 text-white">07/04/2024</p>
+        </div>
 
-  <div class="p-4 m-5 -mt-2 bg-neutral-200 rounded-lg">
-    <p class="text-lg -mt-2">Tratta</p>
-    <p class="text-xl font-medium -mb-2">Da PIEVE DI CURTAROLO a PADOVA</p>
-  </div>
+        <div class="text-right">
+            <p class="text-xs -mt-2 text-white">Valid until:</p>
+            <p class="text-xl font-medium -mb-2 text-white">06/05/2024</p>
+        </div>
+    </div>
+</div>
 
-  <div class="p-4 m-5 -mt-2 bg-[#50C79D] rounded-lg">
-    <p class="text-lg -mt-2 text-white">Scadenza</p>
-    <p class="text-xl font-medium -mb-2 text-white">16/06/2024 23:59:59</p>
-  </div>
+<div class="p-4 m-5 -mt-2 bg-neutral-200 rounded-lg">
+    <p class="text-s -m-2">Issued on: <span class="text-xl font-bold" id="issued_on">01/07/2024 10:19</span></p>
+</div>
 
-  <div class="p-4 m-5 -mt-2 bg-neutral-200 rounded-lg">
-    <p class="text-lg -mt-2">Emesso il: <span class="text-xl font-bold">17/05/2024 18:11</span></p>
-  </div>
+<div class="m-5 -mt-2 flex justify-between items-center">
+    <span class="font-bold text-xl">Price</span>
+    <span class="text-[#CC0033] text-3xl font-bold">€3,40</span>
+</div>
 
-  <div class="m-5 -mt-2 flex justify-between items-center">
-    <span class="font-bold text-2xl">Price</span>
-    <span class="text-[#CC0033] text-3xl font-bold">€61,60</span>
-  </div>
-  
 
-  <script>
+<div class="m-5 -mt-2 flex justify-between items-center mb-30">
+    <span class="">
+      <img src="sita_logo_small.png" alt="" srcset="" width="70%">
+
+    </span>
+    <span class="text-black text-xl font-bold">#7405/1851294</span>
+</div>
+
+<div></div>
+
+
+<script>
     function updateTimer() {
-      const now = new Date();
-      const hours = now.getHours().toString().padStart(2, '0');
-      const minutes = now.getMinutes().toString().padStart(2, '0');
-      const seconds = now.getSeconds().toString().padStart(2, '0');
-      const timeString = `${hours}:${minutes}:${seconds}`;
-      document.getElementById('timer').textContent = timeString;
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        const timeString = `${hours}:${minutes}:${seconds}`;
+        document.getElementById('timer').textContent = timeString;
     }
-  
+
+    function updateTimeRemaining() {
+        // this should be a count down from 45 minutes to 0
+        const now = new Date();
+        const end = new Date(now.getTime() + 45 * 60 * 1000);
+        const hours = end.getHours().toString().padStart(2, '0');
+        const minutes = end.getMinutes().toString().padStart(2, '0');
+        const seconds = end.getSeconds().toString().padStart(2, '0');
+        const timeString = `${hours}:${minutes}:${seconds}`;
+        document.getElementById('time_remaining').textContent = timeString;
+    }
+
+    function startCountdown() {
+        const timeRemainingElement = document.getElementById('time_remaining');
+        let countdownTime = 43 * 60; // 43 minutes in seconds
+
+        function updateTimer() {
+            let hours = Math.floor(countdownTime / 3600);
+            let minutes = Math.floor((countdownTime % 3600) / 60);
+            let seconds = countdownTime % 60;
+
+            // Format the time as 00:00:00
+            let formattedTime =
+                String(hours).padStart(2, '0') + ':' +
+                String(minutes).padStart(2, '0') + ':' +
+                String(seconds).padStart(2, '0');
+
+            timeRemainingElement.textContent = formattedTime;
+
+            if (countdownTime > 0) {
+                countdownTime--;
+                setTimeout(updateTimer, 1000);
+            } else {
+                timeRemainingElement.textContent = "00:00:00";
+            }
+        }
+
+        updateTimer();
+    }
+
+    function setIssuedOn() {
+        const issuedOnElement = document.getElementById('issued_on');
+        const now = new Date();
+        const previousDay = new Date(now);
+        previousDay.setDate(now.getDate() - 1);
+
+        const randomHour = Math.floor(Math.random() * 11) + 8; // Random hour between 8 and 18
+        const randomMinute = Math.floor(Math.random() * 60); // Random minute between 0 and 59
+
+        previousDay.setHours(randomHour);
+        previousDay.setMinutes(randomMinute);
+        previousDay.setSeconds(0);
+
+        const day = String(previousDay.getDate()).padStart(2, '0');
+        const month = String(previousDay.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+        const year = previousDay.getFullYear();
+        const hours = String(previousDay.getHours()).padStart(2, '0');
+        const minutes = String(previousDay.getMinutes()).padStart(2, '0');
+
+        const formattedDate = `${day}/${month}/${year} ${hours}:${minutes}`;
+        issuedOnElement.textContent = formattedDate;
+    }
+
+    function setActivatedOn() {
+        const activateOnElement = document.getElementById('activate_on');
+        const now = new Date();
+        const activationTime = new Date(now.getTime() - 7 * 60 * 1000); // 7 minutes before current time
+
+        const day = String(activationTime.getDate()).padStart(2, '0');
+        const month = String(activationTime.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+        const year = activationTime.getFullYear();
+        const hours = String(activationTime.getHours()).padStart(2, '0');
+        const minutes = String(activationTime.getMinutes()).padStart(2, '0');
+        const seconds = String(activationTime.getSeconds()).padStart(2, '0');
+
+        const formattedDate = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+        activateOnElement.textContent = formattedDate;
+    }
+
+
+    // Start the countdown and set issued date when the page loads
+    window.onload = function () {
+        startCountdown();
+        setIssuedOn();
+        setActivatedOn();
+    };
+
     setInterval(updateTimer, 1000);
-  </script>
+</script>
 </body>
 
 </html>
