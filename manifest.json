@@ -1,9 +1,9 @@
 {
   "name": "Busitalia Veneto",
   "short_name": "Busitalia Veneto",
-  "start_url": "/sita/index.html",
+  "start_url": "/tkt/index.html",
   "display": "standalone",
-  "background_color": "#D1122B",
+  "background_color": "#f9f9f9",
   "theme_color": "#D1122B",
   "orientation": "portrait-primary",
   "icons": [

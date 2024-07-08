@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
-<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
-<!--    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap"-->
-<!--          rel="stylesheet">-->
+    <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+    <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+    <!--    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap"-->
+    <!--          rel="stylesheet">-->
 
     <link rel="manifest" href="manifest.json">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -50,7 +50,7 @@
 <body class="font-['Futura']">
 
 <div class="relative">
-    <div class="grid grid-cols-3 items-center bg-[#CC0033] p-4 rounded-b-xl top-div ">
+    <div class="grid grid-cols-3 items-center bg-[#CC0033] p-4 rounded-b-xl top-div">
         <div class="col-start-1">
             <img src="backhome.png" alt="Left Image" class="h-8 w-30">
         </div>
@@ -62,7 +62,7 @@
         </div>
     </div>
     <div class="wrapper">
-        <div class="bg-[#50C79D] p-3 mt-[-10px]">
+        <div class="bg-[#50C79D] p-3 mt-40 mt-[-10px]">
             <div class="pt-3">
                 <p class="text-white text-center font-bold text-xl">TICKET ACTIVE</p>
             </div>
@@ -85,36 +85,35 @@
 </div>
 
 <div class="p-4 -mt-4">
-    <p class="text-xl font-bold text-[#CC0033] mb-4" style="font-variation-settings: 'wdth' 75;">SETTIMANALE PD
-        ELETTRONICO</p>
+    <p class="text-xl font-bold text-[#CC0033] mb-4" style="font-variation-settings: 'wdth' 75;">ABB. MENS. STUDENTE</p>
 </div>
 
 <div class="p-4 m-5 -mt-2 bg-neutral-200 rounded-lg">
     <p class="text-xs -mt-2">Route:</p>
-    <p class="text-l font-medium -mb-2" id="activate_on">From: PIOVE AUTOST. to PADOVA</p>
+    <p class="text-xl -mb-2" id="activate_on">From: PIOVE AUTOST. to PADOVA</p>
 </div>
 
 <div class="p-4 m-5 -mt-2 bg-[#50C79D] rounded-lg">
     <div class="flex justify-between">
         <div>
             <p class="text-s -mt-2 -mb-2 text-white">Valid from:</p>
-            <p class="text-xl font-medium -mb-2 text-white">07/04/2024</p>
+            <p class="text-xl font-medium -mb-2 text-white" id="valid_from"></p>
         </div>
 
         <div class="text-right">
             <p class="text-s -mb-2 -mt-2 text-white">Valid until:</p>
-            <p class="text-xl font-medium -mb-2 text-white">06/05/2024</p>
+            <p class="text-xl font-medium -mb-2 text-white" id="valid_until">06/05/2024</p>
         </div>
     </div>
 </div>
 
 <div class="p-4 m-5 -mt-2 bg-neutral-200 rounded-lg">
-    <p class="text-s -m-2">Issued on: <span class="text-xl font-bold" id="issued_on">01/07/2024 10:19</span></p>
+    <p class="text-s -m-2">Issued on: <span class="text-l font-bold" id="issued_on">01/07/2024 10:19</span></p>
 </div>
 
 <div class="m-5 -mt-2 flex justify-between items-center">
     <span class="font-bold text-xl">Price</span>
-    <span class="text-[#CC0033] text-3xl font-bold">€24,80</span>
+    <span class="text-[#CC0033] text-2xl font-bold">€61,60</span>
 </div>
 
 
@@ -126,8 +125,9 @@
     <span class="text-black text-xl font-bold">#7405/176878</span>
 </div>
 
-<div></div>
+<div class="h-40">
 
+</div>
 
 <script>
     function updateTimer() {
@@ -135,19 +135,7 @@
         const hours = now.getHours().toString().padStart(2, '0');
         const minutes = now.getMinutes().toString().padStart(2, '0');
         const seconds = now.getSeconds().toString().padStart(2, '0');
-        const timeString = `${hours}:${minutes}:${seconds}`;
-        document.getElementById('timer').textContent = timeString;
-    }
-
-    function updateTimeRemaining() {
-        // this should be a count down from 45 minutes to 0
-        const now = new Date();
-        const end = new Date(now.getTime() + 45 * 60 * 1000);
-        const hours = end.getHours().toString().padStart(2, '0');
-        const minutes = end.getMinutes().toString().padStart(2, '0');
-        const seconds = end.getSeconds().toString().padStart(2, '0');
-        const timeString = `${hours}:${minutes}:${seconds}`;
-        document.getElementById('time_remaining').textContent = timeString;
+        document.getElementById('timer').textContent = `${hours}:${minutes}:${seconds}`;
     }
 
     function startCountdown() {
@@ -159,13 +147,9 @@
             let minutes = Math.floor((countdownTime % 3600) / 60);
             let seconds = countdownTime % 60;
 
-            // Format the time as 00:00:00
-            let formattedTime =
-                String(hours).padStart(2, '0') + ':' +
+            timeRemainingElement.textContent = String(hours).padStart(2, '0') + ':' +
                 String(minutes).padStart(2, '0') + ':' +
                 String(seconds).padStart(2, '0');
-
-            timeRemainingElement.textContent = formattedTime;
 
             if (countdownTime > 0) {
                 countdownTime--;
@@ -178,51 +162,43 @@
         updateTimer();
     }
 
-    function setIssuedOn() {
+    function setDates() {
         const issuedOnElement = document.getElementById('issued_on');
         const now = new Date();
-        const previousDay = new Date(now);
-        previousDay.setDate(now.getDate() - 1);
+        const firstDayOfMonth = now;
+        firstDayOfMonth.setDate(1);
 
         const randomHour = Math.floor(Math.random() * 11) + 8; // Random hour between 8 and 18
         const randomMinute = Math.floor(Math.random() * 60); // Random minute between 0 and 59
 
-        previousDay.setHours(randomHour);
-        previousDay.setMinutes(randomMinute);
-        previousDay.setSeconds(0);
+        firstDayOfMonth.setHours(randomHour);
+        firstDayOfMonth.setMinutes(randomMinute);
+        firstDayOfMonth.setSeconds(0);
 
-        const day = String(previousDay.getDate()).padStart(2, '0');
-        const month = String(previousDay.getMonth() + 1).padStart(2, '0'); // Months are zero-based
-        const year = previousDay.getFullYear();
-        const hours = String(previousDay.getHours()).padStart(2, '0');
-        const minutes = String(previousDay.getMinutes()).padStart(2, '0');
+        const day = String(firstDayOfMonth.getDate()).padStart(2, '0');
+        const month = String(firstDayOfMonth.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+        const year = firstDayOfMonth.getFullYear();
+        const hours = String(firstDayOfMonth.getHours()).padStart(2, '0');
+        const minutes = String(firstDayOfMonth.getMinutes()).padStart(2, '0');
 
-        const formattedDate = `${day}/${month}/${year} ${hours}:${minutes}`;
-        issuedOnElement.textContent = formattedDate;
+        issuedOnElement.textContent = `${month}/${day}/${year} ${hours}:${minutes}`;
+
+        const validFromElement = document.getElementById('valid_from');
+
+        validFromElement.innerText = `${month}/${day}/${year}`;
+
+        const validUntilElement = document.getElementById('valid_until');
+        firstDayOfMonth.setDate(firstDayOfMonth.getDate() + 29);
+        const dayEnd = String(firstDayOfMonth.getDate()).padStart(2, '0');
+        const monthEnd = String(firstDayOfMonth.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+        const yearEnd = firstDayOfMonth.getFullYear();
+        validUntilElement.innerText = `${monthEnd}/${dayEnd}/${yearEnd}`;
     }
-
-    function setActivatedOn() {
-        const activateOnElement = document.getElementById('activate_on');
-        const now = new Date();
-        const activationTime = new Date(now.getTime() - 7 * 60 * 1000); // 7 minutes before current time
-
-        const day = String(activationTime.getDate()).padStart(2, '0');
-        const month = String(activationTime.getMonth() + 1).padStart(2, '0'); // Months are zero-based
-        const year = activationTime.getFullYear();
-        const hours = String(activationTime.getHours()).padStart(2, '0');
-        const minutes = String(activationTime.getMinutes()).padStart(2, '0');
-        const seconds = String(activationTime.getSeconds()).padStart(2, '0');
-
-        const formattedDate = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
-        activateOnElement.textContent = formattedDate;
-    }
-
 
     // Start the countdown and set issued date when the page loads
     window.onload = function () {
-        startCountdown();
-        setIssuedOn();
-        setActivatedOn();
+        // startCountdown();
+        setDates();
     };
 
     setInterval(updateTimer, 1000);
