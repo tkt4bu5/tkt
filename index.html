@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
-    <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
-    <!--    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap"-->
-    <!--          rel="stylesheet">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
 
     <link rel="manifest" href="manifest.json">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" type="text/css" href="fonts/futura/style.css"/>
+    <link rel="stylesheet" type="text/css" href="fonts/futura/futura.css"/>
+    <link rel="stylesheet" type="text/css" href="fonts/mycicero/mycicero.css"/>
 
     <style>
         .wrapper {
@@ -35,6 +36,7 @@
 
     <!-- IOS Support -->
     <link rel="apple-touch-icon" href="icons/logo.png">
+    <link rel="icon" href="icons/logo.png">
     <meta name="apple-mobile-web-app-status-bar" content=""/>
 
     <script>
@@ -71,26 +73,52 @@
 </div>
 
 <div class="m-4 ml-4 mr-4 p-4 mx-auto rounded-lg bg-white shadowww">
-    <div class="flex items-center justify-center h-full">
-        <img src="checkandvalidation.png" alt="Validation Image" class="max-h-full max-w-full">
+    <div class="h-full">
+
+        <div class="flex justify-between">
+            <h1 class="font-bold text-[#CC0033] mb-2" style="font-size: 17px">Check and validation</h1>
+            <img src="icons/chevron-up-outline.svg" class="h-6">
+        </div>
+        <!-- NOTE: Sample QR code corresponds to http://mccr.it/vt?t=20052168&v=0735 -->
+        <div class="flex justify-center items-center mt-2">
+            <div class="text-center">
+                <div id="qr-code" class="h-32 w-32 mx-auto"></div>
+                <!--  g-->
+                <p class="mt-4 text-right font-['Roboto']" style="color: #000;
+                font-size: 22px; font-weight: 800; filter: blur(0.2px); text-shadow: 0.14px 0 0.05px blue;">
+                    531118564
+                </p>
+
+
+                <div class="mt-2 flex justify-center ">
+                    <img src="icons/zoom-in.png"
+                         style="width: 17px; height: 17px; margin-top: 5px; margin-right: -2px;">
+                    <p style="font-size: 18px; font-weight: 400">Zoom</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="flex items-center justify-between">
         <div class="flex items-center">
-            <img src="clock.png" alt="Left Image" class="h-6 mr-2"/>
+            <span class="time-icon icon_orologio mr-2" style="font-size: 20px;"></span>
             <p class="text-lg" id="timer">18:39:31</p>
         </div>
-        <img src="verif.png" alt="Right Image" class="h-5"/>
+        <div class="flex items-center">
+            <!--Note the number is generated every time-->
+            <span class="icon-crc icon_codice_pin text-[#cc0033] mr-2 -mt-1g" style="font-size: 20px"></span>607
+        </div>
     </div>
 </div>
 
 <div class="p-4 -mt-4">
     <p class="text-xl font-bold text-[#CC0033] mb-4" style="font-variation-settings: 'wdth' 75;">ABB. MENS. STUDENTE</p>
+    <p CLASS="text-xs">ABB. MENS. STUDENTE</p>
 </div>
 
-<div class="p-4 m-5 -mt-2 bg-neutral-200 rounded-lg">
+<div class="p-4 m-5 ml-2 -mt-2 bg-neutral-200 rounded-lg">
     <p class="text-xs -mt-2">Route:</p>
-    <p class="text-xl -mb-2" id="activate_on">From: PIOVE AUTOST. to PADOVA</p>
+    <p class="text-xl -mb-2" id="activate_on">Da: PIOVE AUTOST. to PADOVA</p>
 </div>
 
 <div class="p-4 m-5 -mt-2 bg-[#50C79D] rounded-lg">
@@ -128,7 +156,8 @@
 <div class="h-40">
 
 </div>
-
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
     function updateTimer() {
         const now = new Date();
@@ -202,6 +231,63 @@
     };
 
     setInterval(updateTimer, 1000);
+
+
+    function getTicketCode(emissionDate) {
+        // Offset in the future to consider for the given emission date to generate the ticket code (to be sure the ticket won't be expired)
+        let emissionDateFutureOffsetDays = 2;
+
+        // Given a ticket emission date in epoch time (i.e. seconds from 1/1/1970), approximate the ticket code
+        function approximateTicketCode(ticketEmissionDateInEpochTime) {
+            // NOTE: the w and b parameters of the line function were interpolated using 2 previous ticket emission dates and codes to estimate the function that relates the ticket emission date and the ticket code
+            let w_parameter = 389.0 / 468300.0;
+            let b_parameter = -1 * 10901564319.0 / 7805.0;
+            let ticketCode = Math.round(w_parameter * ticketEmissionDateInEpochTime + b_parameter);
+            return ticketCode;
+        }
+
+        let emissionDateFutureOffsetSeconds = emissionDateFutureOffsetDays * 24 * 60 * 60;
+        let emission_date_epoch_time = emissionDate.getTime() / 1000;
+        let ticket_code = approximateTicketCode(emission_date_epoch_time + emissionDateFutureOffsetSeconds);
+        return ticket_code;
+    }
+
+    function createQRCode(emissionDate = null) {
+        // Get the "#qr-code" element
+        let qrCodeElement = $("#qr-code").get(0);
+        // Get the pixel width and height of the "#qr-code" element (in pixels)
+        let qrCodeWidth = qrCodeElement.clientWidth !== 0 ? qrCodeElement.clientWidth : 200;
+        let qrCodeHeight = qrCodeElement.clientHeight !== 0 ? qrCodeElement.clientHeight : 200;
+        // Create the QR code
+        let t_parameter = "20052167";
+        if (emissionDate != null) {
+            // Ticket code and emission date of the ticket with the corresponding t parameter
+            let sample_ticket_code = 26982;
+            // Get the ticket code of the current ticket
+            let ticket_code = getTicketCode(emissionDate);
+            let tickets_code_difference = ticket_code - sample_ticket_code;
+            let new_t_parameter = (parseInt(t_parameter) + tickets_code_difference).toString();
+            console.log("New 't' parameter: " + new_t_parameter);
+            t_parameter = new_t_parameter;
+        }
+        let v_parameter = "0009";
+        let qr_code_text = "http://mccr.it/vt?t=" + t_parameter + "&v=" + v_parameter;
+        console.log("QR code text: " + qr_code_text);
+        // Url encoded
+        let qrcode = new QRCode(qrCodeElement, {
+            text: qr_code_text,
+            width: qrCodeWidth,
+            height: qrCodeHeight,
+            colorDark: "#151515",
+            colorLight: "#fff",
+            correctLevel: QRCode.CorrectLevel.L
+        });
+
+        // Return the QR code
+        return qrcode;
+    }
+
+    console.log(createQRCode(new Date()))
 </script>
 </body>
 

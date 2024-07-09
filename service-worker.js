@@ -12,8 +12,8 @@ const assets = [
     "/tkt/favicon.ico",
     "/tkt/favicon-16x16.png",
     "/tkt/favicon-32x32.png",
-    "/tkt/limerick-serial/style.css",
-    "/tkt/limerick-serial/style.css",
+    "/tkt/limerick-serial/mycicero.css",
+    "/tkt/limerick-serial/mycicero.css",
     "/tkt/limerick-serial/Limerick-Serial Bold.ttf",
     "/tkt/limerick-serial/Limerick-Serial Regular.ttf",
     "/tkt/limerick-serial/Limerick-Serial-Medium Regular.ttf"

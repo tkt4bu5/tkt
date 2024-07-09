@@ -1,0 +1,633 @@
+
+
+@font-face {
+    font-family: "icon_set_base_mycicero";
+    src: url("icon_set_base_mycicero.eot");
+    src: url("icon_set_base_mycicero.eot#iefix") format("embedded-opentype"), url("icon_set_base_mycicero.ttf") format("truetype"), url("icon_set_base_mycicero.woff") format("woff"), url("icon_set_base_mycicero.svg#icon_set_base_mycicero") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^='icon_'],
+[class*=' icon_'] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icon_set_base_mycicero" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_driver:before {
+    content: "";
+}
+
+.icon_passenger:before {
+    content: "";
+}
+
+.icon_sblocco_mezzo:before {
+    content: "";
+}
+
+.icon_disabili:before {
+    content: "";
+}
+
+.icon_bagaglio:before {
+    content: "";
+}
+
+.icon_animali:before {
+    content: "";
+}
+
+.icon_parla_con_noi:before {
+    content: "";
+}
+
+.icon_faq:before {
+    content: "";
+}
+
+.icon_email_2:before {
+    content: "";
+}
+
+.icon_voucher:before {
+    content: "";
+}
+
+.icon_prenota:before {
+    content: "";
+}
+
+.icon_avvisi:before {
+    content: "";
+}
+
+.icon_prenotazione:before {
+    content: "";
+}
+
+.icon_monopattino_arrow:before {
+    content: "";
+}
+
+.icon_trova_tariffa:before {
+    content: "";
+}
+
+.icon_batteria:before {
+    content: "";
+}
+
+.icon_preferiti_on:before {
+    content: "";
+}
+
+.icon_monopattino:before {
+    content: "";
+}
+
+.icon_bike_sharing:before {
+    content: "";
+}
+
+.icon_movimenti:before {
+    content: "";
+}
+
+.icon_tempo_reale:before {
+    content: "";
+}
+
+.icon_scansiona_qrcode:before {
+    content: "";
+}
+
+.icon_documento:before {
+    content: "";
+}
+
+.icon_excel:before {
+    content: "";
+}
+
+.icon_pdf:before {
+    content: "";
+}
+
+.icon_agevolazione:before {
+    content: "";
+}
+
+.icon_satispay:before {
+    content: "";
+}
+
+.icon_euro:before {
+    content: "";
+}
+
+.icon_caricaabbonamento:before {
+    content: "";
+}
+
+.icon_news2:before {
+    content: "";
+}
+
+.icon_feedback:before {
+    content: "";
+}
+
+.icon_clessidra:before {
+    content: "";
+}
+
+.icon_posti:before {
+    content: "";
+}
+
+.icon_non_acquistabile:before {
+    content: "";
+}
+
+.icon_carnet:before {
+    content: "";
+}
+
+.icon_amat:before {
+    content: "";
+}
+
+.icon_pin_fermata:before {
+    content: "";
+}
+
+.icon_qrcode:before {
+    content: "";
+}
+
+.icon_bambino:before {
+    content: "";
+}
+
+.icon_cambio_mezzo:before {
+    content: "";
+}
+
+.icon_eventi:before {
+    content: "";
+}
+
+.icon_percorso:before {
+    content: "";
+}
+
+.icon_binario:before {
+    content: "";
+}
+
+.icon_navigatore:before {
+    content: "";
+}
+
+.icon_inverti:before {
+    content: "";
+}
+
+.icon_ordina:before {
+    content: "";
+}
+bundle
+.icon_cambia_citta:before {
+    content: "";
+}
+
+.icon_download:before {
+    content: "";
+}
+
+.icon_smartphone_nfc:before {
+    content: "";
+}
+
+.icon_carrello:before {
+    content: "";
+}
+
+.icon_speciale:before {
+    content: "";
+}
+
+.icon_a_piedi:before {
+    content: "";
+}
+
+.icon_radar:before {
+    content: "";
+}
+
+.icon_luoghi:before {
+    content: "";
+}
+
+.icon_indirizzo:before {
+    content: "";
+}
+
+.icon_lavoro:before {
+    content: "";
+}
+
+.icon_Wagon:before {
+    content: "";
+}
+
+.icon_call_center:before {
+    content: "";
+}
+
+.icon_telefono:before {
+    content: "";
+}
+
+.icon_taxi:before {
+    content: "";
+}
+
+.icon_timer:before {
+    content: "";
+}
+
+.icon_aggiorna:before {
+    content: "";
+}
+
+.icon_auto:before {
+    content: "";
+}
+
+.icon_minivan:before {
+    content: "";
+}
+
+.icon_van:before {
+    content: "";
+}
+
+.icon_adulto:before {
+    content: "";
+}
+
+.icon_destinazione:before {
+    content: "";
+}
+
+.icon_metro:before {
+    content: "";
+}
+
+.icon_down1:before {
+    content: "";
+}
+
+.icon_bus:before {
+    content: "";
+}
+
+.icon_partenza:before {
+    content: "";
+}
+
+.icon_train:before {
+    content: "";
+}
+
+.icon_portami_qui_a_piedi:before {
+    content: "";
+}
+
+.icon_segna_postoauto1:before {
+    content: "";
+}
+
+.icon_portami_qui_trasporto:before {
+    content: "";
+}
+
+.icon_portami_qui_auto:before {
+    content: "";
+}
+
+.icon_pagamento_delegato:before {
+    content: "";
+}
+
+.icon_pagamento_carta:before {
+    content: "";
+}
+
+.icon_cancella_tastiera:before {
+    content: "";
+}
+
+.icon_codice_pin:before {
+    content: "";
+}
+
+.icon_carta:before {
+    content: "";
+}
+
+.icon_credito_parent:before {
+    content: "";
+}
+
+.icon_mirino_mappa_2:before {
+    content: "";
+}
+
+.icon_mirino_mappa_1:before {
+    content: "";
+}
+
+.icon_esci:before {
+    content: "";
+}
+
+.icon_attivo:before {
+    content: "";
+}
+
+.icon_zoom_mappa:before {
+    content: "";
+}
+
+.icon_parcheggi_gestiti:before {
+    content: "";
+}
+
+.icon_cambia_foto:before {
+    content: "";
+}
+
+.icon_abbonamenti:before {
+    content: "";
+}
+
+.icon_accedi:before {
+    content: "";
+}
+
+.icon_aeroporti_mycicero:before {
+    content: "";
+}
+
+.icon_agevolazioni_sosta:before {
+    content: "";
+}
+
+.icon_attenzione:before {
+    content: "";
+}
+
+.icon_avanti:before {
+    content: "";
+}
+
+.icon_avvia_navigatore:before {
+    content: "";
+}
+
+.icon_biglietteria:before {
+    content: "";
+}
+
+.icon_biglietti_prenotazione:before {
+    content: "";
+}
+
+.icon_calendario:before {
+    content: "";
+}
+
+.icon_cassa_automatica:before {
+    content: "";
+}
+
+.icon_centri_commerciali:before {
+    content: "";
+}
+
+.icon_cerca:before {
+    content: "";
+}
+
+.icon_chiudi:before {
+    content: "";
+}
+
+.icon_codice_fiscale:before {
+    content: "";
+}
+
+.icon_condividi:before {
+    content: "";
+}
+
+.icon_contattaci:before {
+    content: "";
+}
+
+.icon_credito:before {
+    content: "";
+}
+
+.icon_down:before {
+    content: "";
+}
+
+.icon_elimina:before {
+    content: "";
+}
+
+.icon_email_1:before {
+    content: "";
+}
+
+.icon_filtro_1:before {
+    content: "";
+}
+
+.icon_filtro_2:before {
+    content: "";
+}
+
+.icon_gps_acceso:before {
+    content: "";
+}
+
+.icon_gps_spento:before {
+    content: "";
+}
+
+.icon_home:before {
+    content: "";
+}
+
+.icon_i_miei_titoli:before {
+    content: "";
+}
+
+.icon_imposta_orario:before {
+    content: "";
+}
+
+.icon_indietro:before {
+    content: "";
+}
+
+.icon_info:before {
+    content: "";
+}
+
+.icon_invio_talloncino:before {
+    content: "";
+}
+
+.icon_lista:before {
+    content: "";
+}
+
+.icon_logo_baffo_avvisi:before {
+    content: "";
+}
+
+.icon_mappa:before {
+    content: "";
+}
+
+.icon_meno:before {
+    content: "";
+}
+
+.icon_modifica:before {
+    content: "";
+}
+
+.icon_nascosto_mycicero:before {
+    content: "";
+}
+
+.icon_news:before {
+    content: "";
+}
+
+.icon_non_disponibile:before {
+    content: "";
+}
+
+.icon_notifiche:before {
+    content: "";
+}
+
+.icon_orologio:before {
+    content: "";
+}
+
+.icon_outlet:before {
+    content: "";
+}
+
+.icon_parchi_divertimento:before {
+    content: "";
+}
+
+.icon_permessi_ztl:before {
+    content: "";
+}
+
+.icon_piu:before {
+    content: "";
+}
+
+.icon_porti:before {
+    content: "";
+}
+
+.icon_posizione_non_trovata:before {
+    content: "";
+}
+
+.icon_posizione:before {
+    content: "";
+}
+
+.icon_preferiti:before {
+    content: "";
+}
+
+.icon_profilo:before {
+    content: "";
+}
+
+.icon_segna_postoauto:before {
+    content: "";
+}
+
+.icon_slider_off:before {
+    content: "";
+}
+
+.icon_slider_on:before {
+    content: "";
+}
+
+.icon_soluzioni_di_viaggio:before {
+    content: "";
+}
+
+.icon_spiagge:before {
+    content: "";
+}
+
+.icon_stazioni_ferroviarie:before {
+    content: "";
+}
+
+.icon_strisce_blu:before {
+    content: "";
+}
+
+.icon_tabellone_orari:before {
+    content: "";
+}
+
+.icon_trova_la_mia_auto:before {
+    content: "";
+}
+
+.icon_up:before {
+    content: "";
+}
+
+.icon_visibile:before {
+    content: "";
+}
+
+.icon_zona_non_servita_mappa:before {
+    content: "";
+}
+
+.icon_zona_servita_mappa:before {
+    content: "";
+}
