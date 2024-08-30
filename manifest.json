@@ -78,6 +78,10 @@
       {
           "src": "clock.png",
           "sizes": "16x16"
+      },
+      {
+          "src": "icons/logo.png",
+          "sizes": "240x240"
       }
   ]
 }
