@@ -8,80 +8,9 @@
   "orientation": "portrait-primary",
   "icons": [
       {
-          "src": "clock.png",
-          "sizes": "512x512"
-      },
-      {
-          "src": "clock.png",
-          "sizes": "192x192"
-      },
-      {
-          "src": "clock.png",
-          "sizes": "144x144"
-      },
-      {
-          "src": "clock.png",
-          "sizes": "96x96"
-      },
-      {
-          "src": "clock.png",
-          "sizes": "72x72"
-      },
-      {
-          "src": "clock.png",
-          "sizes": "48x48"
-      },
-      {
-          "src": "clock.png",
-          "sizes": "48x48"
-      },
-      {
-          "src": "clock.png",
-          "sizes": "16x16"
-      },
-      {
-          "src": "clock.png",
-          "sizes": "128x128"
-      },
-      {
-          "src": "clock.png",
-          "sizes": "512x512"
-      },
-      {
-          "src": "clock.png",
-          "sizes": "128x128"
-      },
-      {
-          "src": "clock.png",
-          "sizes": "256x256"
-      },
-      {
-          "src": "clock.png",
-          "sizes": "128x128"
-      },
-      {
-          "src": "clock.png",
-          "sizes": "90x90"
-      },
-      {
-          "src": "clock.png",
-          "sizes": "64x64"
-      },
-      {
-          "src": "clock.png",
-          "sizes": "48x48"
-      },
-      {
-          "src": "clock.png",
-          "sizes": "32x32"
-      },
-      {
-          "src": "clock.png",
-          "sizes": "16x16"
-      },
-      {
           "src": "icons/logo.png",
-          "sizes": "240x240"
+          "sizes": "any",
+          "type": "image/png"
       }
   ]
 }
